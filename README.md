@@ -1,5 +1,5 @@
 
-# Custom Bottom Navbar
+# Personalized Custom Bottom Navbar
 
 A customizable bottom navigation bar package for Flutter that supports various styles and customization options using enums and custom widgets.
 
@@ -21,11 +21,11 @@ A customizable bottom navigation bar package for Flutter that supports various s
 
 ## Getting Started
 
-To start using the `custom_bottom_navbar` package, add it to your `pubspec.yaml`:
+To start using the `personalized_bottom_navbar` package, add it to your `pubspec.yaml`:
 
 ```yaml
 dependencies:
-  custom_bottom_navbar: ^0.0.1
+  personalized_bottom_navbar: ^0.0.1
 ```
 
 Then run `flutter pub get` to install the package.
@@ -36,7 +36,7 @@ Here is a basic example of how to use the `CustomBottomNavBar`:
 
 ```dart
 import 'package:flutter/material.dart';
-import 'package:custom_bottom_navbar/custom_bottom_navbar.dart';
+import 'package:personalized_bottom_navbar/personalized_bottom_navbar.dart';
 
 void main() {
   runApp(MyApp());
@@ -102,11 +102,11 @@ The `CustomBottomNavBar` widget provides various customization options to fit yo
 
 ## Additional Information
 
-For more details, check the [GitHub repository](https://github.com/hs-dev1/custom_bottom_navbar/tree/master).
+For more details, check the [GitHub repository](https://github.com/hs-dev1/personalized_bottom_navbar/tree/master).
 
 ### Contributing
 
-Contributions are welcome! If you encounter any issues or have suggestions for improvements, feel free to [open an issue](https://github.com/hs-dev1/custom_bottom_navbar/issues) or submit a pull request.
+Contributions are welcome! If you encounter any issues or have suggestions for improvements, feel free to [open an issue](https://github.com/hs-dev1/personalized_bottom_navbar/issues) or submit a pull request.
 
 ### License
 

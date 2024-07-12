@@ -1,4 +1,4 @@
-import 'package:custom_bottom_navbar/custom_bottom_navbar.dart';
+import 'package:personalized_bottom_navbar/personalized_bottom_navbar.dart';
 import 'package:flutter/material.dart';
 
 void main() {
