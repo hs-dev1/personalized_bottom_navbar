@@ -1,8 +1,7 @@
 name: custom_bottom_navbar
 description: "A custom bottom navigation bar package for Flutter, supporting enums and custom widgets."
 version: 0.0.1
-homepage: ""
-repository: https://github.com/your/repo
+homepage: https://github.com/hs-dev1/custom_bottom_navbar/tree/master
 
 
 environment:

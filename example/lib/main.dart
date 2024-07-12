@@ -1,6 +1,4 @@
-// ignore_for_file: library_private_types_in_public_api
-
-import 'package:custom_bottom_navbar/nav_bar.dart';
+import 'package:custom_bottom_navbar/custom_bottom_navbar.dart';
 import 'package:flutter/material.dart';
 
 void main() {

@@ -1,39 +1,113 @@
-<!--
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
 
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/guides/libraries/writing-package-pages).
+# Custom Bottom Navbar
 
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-library-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/developing-packages).
--->
-
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+A customizable bottom navigation bar package for Flutter that supports various styles and customization options using enums and custom widgets.
 
 ## Features
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+- Multiple navigation bar styles with `NavBarType` enums:
+  - `textOnly`
+  - `iconOnly`
+  - `textIconTop`
+  - `textIconBottom`
+  - `textWithRoundedSelection`
+  - `iconWithRoundedSelection`
+  - `textIconHideUnselected`
+  - `shadowEffectOnSelection`
+  - `animationOnSelection`
+  - `glowEffectOnSelection`
 
-## Getting started
+- Allows developers to pass custom widgets for more customization.
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+## Getting Started
+
+To start using the `custom_bottom_navbar` package, add it to your `pubspec.yaml`:
+
+```yaml
+dependencies:
+  custom_bottom_navbar: ^0.0.1
+```
+
+Then run `flutter pub get` to install the package.
 
 ## Usage
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder.
+Here is a basic example of how to use the `CustomBottomNavBar`:
 
 ```dart
-const like = 'sample';
+import 'package:flutter/material.dart';
+import 'package:custom_bottom_navbar/custom_bottom_navbar.dart';
+
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: MyHomePage(),
+    );
+  }
+}
+
+class MyHomePage extends StatefulWidget {
+  @override
+  _MyHomePageState createState() => _MyHomePageState();
+}
+
+class _MyHomePageState extends State<MyHomePage> {
+  int _currentIndex = 0;
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: Text('Custom Bottom Navbar Example')),
+      body: Center(child: Text('Selected Index: $_currentIndex')),
+      bottomNavigationBar: CustomBottomNavBar(
+        type: NavBarType.iconWithRoundedSelection,
+        items: [
+          BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
+          BottomNavigationBarItem(icon: Icon(Icons.search), label: 'Search'),
+          BottomNavigationBarItem(icon: Icon(Icons.person), label: 'Profile'),
+        ],
+        currentIndex: _currentIndex,
+        onTap: (index) {
+          setState(() {
+            _currentIndex = index;
+          });
+        },
+      ),
+    );
+  }
+}
 ```
 
-## Additional information
+## Customization
 
-TODO: Tell users more about the package: where to find more information, how to
-contribute to the package, how to file issues, what response they can expect
-from the package authors, and more.
+The `CustomBottomNavBar` widget provides various customization options to fit your needs. You can choose from different styles using the `NavBarType` enum and pass custom widgets to further customize the navigation bar.
+
+### Available NavBar Types
+
+- `textOnly`: Displays only text labels.
+- `iconOnly`: Displays only icons.
+- `textIconTop`: Displays icons with text labels above them.
+- `textIconBottom`: Displays icons with text labels below them.
+- `textWithRoundedSelection`: Displays text with a rounded indicator for the selected item.
+- `iconWithRoundedSelection`: Displays icons with a rounded indicator for the selected item.
+- `textIconHideUnselected`: Displays icons and text labels but hides labels for unselected items.
+- `shadowEffectOnSelection`: Displays a shadow effect on the selected item.
+- `animationOnSelection`: Animates the selected item.
+- `glowEffectOnSelection`: Displays a glow effect on the selected item.
+
+## Additional Information
+
+For more details, check the [GitHub repository](https://github.com/hs-dev1/custom_bottom_navbar/tree/master).
+
+### Contributing
+
+Contributions are welcome! If you encounter any issues or have suggestions for improvements, feel free to [open an issue](https://github.com/hs-dev1/custom_bottom_navbar/issues) or submit a pull request.
+
+### License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
