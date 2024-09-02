@@ -1,3 +1,28 @@
+
+
+## 0.0.2
+
+* Renamed `CustomBottomNavBar` to `PersonalizedBottomNavBar`.
+* Introduced additional parameters for enhanced customization:
+  * `backgroundColor`
+  * `elevation`
+  * `fixedColor`
+  * `iconSize`
+  * `landscapeLayout`
+  * `mouseCursor`
+  * `selectedFontSize`
+  * `selectedIconTheme`
+  * `selectedItemColor`
+  * `selectedLabelStyle`
+  * `showSelectedLabels`
+  * `showUnselectedLabels`
+  * `unselectedFontSize`
+  * `unselectedIconTheme`
+  * `unselectedItemColor`
+  * `unselectedLabelStyle`
+* Enhanced performance and stability for smoother navigation transitions.
+* Updated documentation to reflect the new changes and improvements.
+
 ## 0.0.1
 
 * Initial release of `personalized_bottom_navbar`.

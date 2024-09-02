@@ -7,7 +7,7 @@ void main() {
     await tester.pumpWidget(
       MaterialApp(
         home: Scaffold(
-          bottomNavigationBar: CustomBottomNavBar(
+          bottomNavigationBar: PersonalizedBottomNavBar(
             type: NavBarType.iconOnly,
             items: const [
               BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
@@ -32,7 +32,7 @@ void main() {
     await tester.pumpWidget(
       MaterialApp(
         home: Scaffold(
-          bottomNavigationBar: CustomBottomNavBar(
+          bottomNavigationBar: PersonalizedBottomNavBar(
             type: NavBarType.iconOnly,
             items: const [
               BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),

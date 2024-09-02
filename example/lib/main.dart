@@ -46,7 +46,9 @@ class _MyHomePageState extends State<MyHomePage> {
           ],
         ),
       ),
-      bottomNavigationBar: CustomBottomNavBar(
+      bottomNavigationBar: PersonalizedBottomNavBar(
+        unselectedItemColor: Colors.red,
+        selectedItemColor: Colors.amber,
         items: Iterable<int>.generate(labels.length)
             .map((index) => BottomNavigationBarItem(
                   icon: Icon(icons[index]),
@@ -55,8 +57,20 @@ class _MyHomePageState extends State<MyHomePage> {
             .toList(),
         currentIndex: _selectedIndex,
         onTap: _onItemTapped,
-        type: NavBarType.iconWithRoundedSelection,
+        type: NavBarType.values[9],
       ),
     );
   }
 }
+// enum NavBarType {
+//   textOnly,
+//   iconOnly,
+//   textIconTop,
+//   textIconBottom,
+//   textWithRoundedSelection,
+//   iconWithRoundedSelection,
+//   textIconHideUnselected,
+//   shadowEffectOnSelection,
+//   animationOnSelection,
+//   glowEffectOnSelection,
+// }
