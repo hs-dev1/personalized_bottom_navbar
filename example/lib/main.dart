@@ -1,5 +1,7 @@
-import 'package:personalized_bottom_navbar/personalized_bottom_navbar.dart';
+// ignore_for_file: library_private_types_in_public_api
+
 import 'package:flutter/material.dart';
+import 'package:personalized_bottom_navbar/personalized_bottom_navbar.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,7 +13,6 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      // theme: ThemeData.dark(useMaterial3: true),
       home: MyHomePage(),
     );
   }
@@ -25,52 +26,32 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _selectedIndex = 0;
-
-  void _onItemTapped(int index) {
-    setState(() {
-      _selectedIndex = index;
-    });
-  }
-
-  final List<String> labels = ['Home', 'Search', 'Profile'];
-  final List<IconData> icons = [Icons.home, Icons.search, Icons.person];
+  int _currentIndex = 0;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child: Column(
-          children: [
-            Text('Tab $_selectedIndex'),
-          ],
-        ),
-      ),
+      appBar: AppBar(title: const Text('Personalized Bottom Navbar Example')),
+      body: Center(child: Text('Selected Index: $_currentIndex')),
       bottomNavigationBar: PersonalizedBottomNavBar(
-        unselectedItemColor: Colors.red,
-        selectedItemColor: Colors.amber,
-        items: Iterable<int>.generate(labels.length)
-            .map((index) => BottomNavigationBarItem(
-                  icon: Icon(icons[index]),
-                  label: labels[index],
-                ))
-            .toList(),
-        currentIndex: _selectedIndex,
-        onTap: _onItemTapped,
-        type: NavBarType.values[9],
+        type: NavBarType.shadowEffectOnSelection,
+        items: const [
+          BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
+          BottomNavigationBarItem(icon: Icon(Icons.search), label: 'Search'),
+          BottomNavigationBarItem(icon: Icon(Icons.person), label: 'Profile'),
+        ],
+        currentIndex: _currentIndex,
+        onTap: (index) {
+          setState(() {
+            _currentIndex = index;
+          });
+        },
+        // Example of additional parameters:
+        elevation: 8.0,
+        iconSize: 30.0,
+        selectedFontSize: 14.0,
+        unselectedFontSize: 12.0,
       ),
     );
   }
 }
-// enum NavBarType {
-//   textOnly,
-//   iconOnly,
-//   textIconTop,
-//   textIconBottom,
-//   textWithRoundedSelection,
-//   iconWithRoundedSelection,
-//   textIconHideUnselected,
-//   shadowEffectOnSelection,
-//   animationOnSelection,
-//   glowEffectOnSelection,
-// }
