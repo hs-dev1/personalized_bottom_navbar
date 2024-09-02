@@ -1,5 +1,9 @@
 
 
+## 0.0.3
+
+* Readme.md updated.
+
 ## 0.0.2
 
 * Renamed `CustomBottomNavBar` to `PersonalizedBottomNavBar`.

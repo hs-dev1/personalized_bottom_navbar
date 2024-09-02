@@ -1,6 +1,6 @@
 Here's the updated `README.md` reflecting the changes from the `CHANGELOG.md`:
 
-````markdown
+
 # Personalized Custom Bottom Navbar
 
 A customizable bottom navigation bar package for Flutter that supports various styles and customization options using enums and custom widgets.
@@ -47,7 +47,7 @@ To start using the `personalized_bottom_navbar` package, add it to your `pubspec
 dependencies:
   personalized_bottom_navbar: ^0.0.2
 ```
-````
+
 
 Then run `flutter pub get` to install the package.
 
